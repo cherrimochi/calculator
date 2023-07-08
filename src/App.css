@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+body{
+  background: linear-gradient(
+    to left,
+    rgba(231, 165, 210, 0.776) 0%,
+    rgba(221, 182, 235, 0.604) 50%,
+    rgb(255, 255, 255)100%
+  );
+}
+
+.title{
+  margin-top: 75px;
+  margin-bottom:20px;
+  font-size: 75px;
+  color: #f59acf;
+  font-family: 'Courgette', cursive;
+ }
+
+ .title:hover{
+  color: rgb(178, 111, 241);
+
+ }
+
+ .myScreen{
+  width: 29.5vw;
+  height: 3vw;
+  color: #ed6db8;
+  background-color:rgba(239, 208, 231, 0.349);  
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: x-large;
+ }
+
+ .myScreen:hover{
+  color: rgb(178, 111, 241);
+  background-color:rgba(239, 180, 254, 0.824); 
+ }

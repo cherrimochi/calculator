@@ -1,0 +1,33 @@
+.button-box{
+    width: 30vw;
+    height: 25vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button { 
+    color:#ff53ba; 
+    font: old 84% 'trebuchet ms',helvetica,sans-serif; 
+    font-size: medium;
+    background-color:rgba(241, 206, 232, 0.815); 
+    border:1px solid; 
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: x-large;
+}
+
+button:hover { 
+    color:#b04fff; 
+    font: old 84% 'trebuchet ms',helvetica,sans-serif; 
+    background-color:rgba(239, 180, 254, 0.824); 
+    border:1px solid; 
+    
+}
+
+.buttonEquals{
+    grid-column:  span 2;
+}
+
+
+
+
