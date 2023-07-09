@@ -1,9 +1,9 @@
-import {useState, useEffect} from 'react';
-import { Component } from 'react';
+import {useState, useEffect, useMemo, useCallback, Component } from 'react';
 import ButtonBox from './components/buttons/bottonBox';
-import Button from './components/buttons/button'
 import './components/buttons/buttonBoxstyles.css';
 import './App.css';
+import './components/particles/particles.component';
+import Particle from './components/particles/particles.component';
 
 const App = () => {
 
@@ -27,20 +27,31 @@ const App = () => {
  }
 
  const equalButton = () => {
-    let x = eval(screenDisplay);
-    setScreenDisplay(x);
+    try{
+      let x = eval(screenDisplay);
+      setScreenDisplay(x);
+    } catch(e) { 
+      setScreenDisplay("error");
+     }
  }
 
-  return (
-    <div className="App">
-      <div>
-        <h1 className = 'title'>Rose's Calculator</h1>
-        <input className= 'myScreen'
+const Calculator = () => (
+  <div>
+    <input className= 'myScreen'
           type='text'
           value={screenDisplay}
         />
-      </div>
-      <ButtonBox buttons= {charaValues} handler1={numberClicked} handler2= {equalButton} handler3= {clearButton}/>
+    <ButtonBox buttons= {charaValues} handler1={numberClicked} handler2= {equalButton} handler3= {clearButton}/>
+  </div>
+);
+
+const particleComponent = useMemo(() => <Particle />, [])
+
+  return (
+    <div className="App">
+      {particleComponent}
+      <h1 className = 'title'>Rose's Calculator</h1>
+      <Calculator/>
     </div>
   );
 }
